@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaching & Services — Strong by Lee | White Plains, NY</title>
+  <meta name="description" content="Private personal training, small group sessions, and nutrition coaching in White Plains, NY. Personalized programs for real people." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .services {
+      padding: 96px 80px; max-width: 1200px; margin: 0 auto;
+    }
+    .services h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: var(--black); margin-bottom: 12px;
+    }
+    .services > p {
+      color: var(--muted); font-size: 1rem;
+      max-width: 560px; margin-bottom: 64px;
+    }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      margin-bottom: 80px;
+    }
+    .service-card {
+      background: var(--warm); padding: 48px 40px; border-radius: 2px;
+      display: flex; flex-direction: column;
+    }
+    .service-card.featured {
+      background: var(--black); position: relative;
+    }
+    .service-badge {
+      position: absolute; top: -12px; left: 40px;
+      background: var(--accent); color: #fff;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 2px;
+    }
+    .service-icon { font-size: 2rem; margin-bottom: 20px; display: block; }
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700;
+      color: var(--black); margin-bottom: 16px;
+    }
+    .service-card.featured h3 { color: #fff; }
+    .service-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; flex: 1; }
+    .service-card.featured p { color: rgba(255,255,255,0.6); }
+    .service-features {
+      margin: 24px 0; list-style: none; display: flex; flex-direction: column; gap: 10px;
+    }
+    .service-features li {
+      font-size: 0.9rem; color: var(--text);
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .service-card.featured .service-features li { color: rgba(255,255,255,0.65); }
+    .service-features li::before {
+      content: '✓'; color: var(--accent);
+      font-weight: 700; flex-shrink: 0; margin-top: 1px;
+    }
+    .service-cta {
+      display: inline-block; margin-top: auto;
+      padding-top: 24px;
+    }
+    .service-cta a {
+      display: inline-block; text-decoration: none;
+      font-size: 0.83rem; font-weight: 600;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--accent); border-bottom: 1px solid var(--accent);
+      padding-bottom: 2px; transition: opacity 0.2s;
+    }
+    .service-cta a:hover { opacity: 0.7; }
+    .service-card.featured .service-cta a { color: #fff; border-color: #fff; }
+
+    .process { background: var(--warm); padding: 96px 80px; }
+    .process-inner { max-width: 1100px; margin: 0 auto; }
+    .process-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: var(--black); margin-bottom: 12px;
+    }
+    .process-inner > p {
+      color: var(--muted); max-width: 520px; margin-bottom: 64px;
+    }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+      background: var(--warm);
+    }
+    .process-step {
+      background: var(--offwhite); padding: 40px 32px;
+      position: relative;
+    }
+    .process-step::after {
+      content: '→';
+      position: absolute; right: -14px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent); font-size: 1.2rem; z-index: 1;
+    }
+    .process-step:last-child::after { display: none; }
+    .step-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem; font-weight: 900;
+      color: var(--warm); line-height: 1; margin-bottom: 16px;
+    }
+    .process-step h3 {
+      font-size: 1rem; font-weight: 600;
+      color: var(--black); margin-bottom: 8px;
+    }
+    .process-step p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+    .who-section { padding: 96px 80px; }
+    .who-inner { max-width: 1100px; margin: 0 auto; }
+    .who-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: var(--black); margin-bottom: 48px;
+    }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .who-item {
+      display: flex; gap: 20px; padding: 28px 32px;
+      background: var(--warm); border-radius: 2px; align-items: flex-start;
+    }
+    .who-check { color: var(--accent); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; font-weight: 700; }
+    .who-item p { font-size: 0.97rem; color: var(--text); line-height: 1.65; }
+
+    @media (max-width: 900px) {
+      .services { padding: 72px 32px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process { padding: 72px 32px; }
+      .process-steps { grid-template-columns: 1fr; }
+      .process-step::after { display: none; }
+      .who-section { padding: 72px 32px; }
+      .who-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="52"></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html" class="active">Coaching</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-close" id="mobileClose">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color: var(--accent);">Free Consultation</a>
+  </div>
+
+  <div class="page-hero">
+    <span class="section-label">Coaching & Services</span>
+    <h1>Training built around<br/><em>your</em> life.</h1>
+    <p>Not a template. Not a group class. A program designed specifically for you — your body, your goals, your schedule.</p>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services reveal">
+    <span class="section-label">What's available</span>
+    <h2>Three ways to work together.</h2>
+    <p>All sessions take place in a private studio in White Plains, NY — no crowds, no waiting, no intimidating gym floor.</p>
+
+    <div class="services-grid">
+      <div class="service-card featured">
+        <span class="service-badge">Most Popular</span>
+        <span class="service-icon">👤</span>
+        <h3>Private 1-on-1 Training</h3>
+        <p>The most personalized experience available. Every session is built around you, adjusted in real time, and designed to get you results without wasting your time.</p>
+        <ul class="service-features">
+          <li>Fully customized programming</li>
+          <li>Real-time form feedback and coaching</li>
+          <li>Injury-aware exercise selection</li>
+          <li>Nutrition guidance included</li>
+          <li>Flexible scheduling around your life</li>
+        </ul>
+        <div class="service-cta"><a href="contact.html">Inquire about availability →</a></div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">👥</span>
+        <h3>Semi-Private Training</h3>
+        <p>The accountability and energy of training with others, without losing the personalized attention that makes a real difference. Limited to small groups intentionally.</p>
+        <ul class="service-features">
+          <li>No more than 3 clients per session</li>
+          <li>Programmed for the group's needs</li>
+          <li>More affordable than 1-on-1</li>
+          <li>Built-in accountability partners</li>
+        </ul>
+        <div class="service-cta"><a href="contact.html">Inquire about availability →</a></div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🥗</span>
+        <h3>Nutrition Coaching</h3>
+        <p>As a registered dietitian, I offer nutrition coaching that's grounded in actual science — not trends, not elimination diets, not anything you've seen on Instagram.</p>
+        <ul class="service-features">
+          <li>Individualized nutrition planning</li>
+          <li>Practical, sustainable approach</li>
+          <li>Works alongside your training</li>
+          <li>No fads. No gimmicks.</li>
+        </ul>
+        <div class="service-cta"><a href="contact.html">Inquire about availability →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHING PHOTO STRIP -->
+  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:4px; background:var(--black);">
+    <img src="images/studio-coaching.jpg" alt="David coaching in the Strong by Lee studio" style="width:100%; height:400px; object-fit:cover; display:block;">
+    <img src="images/group-plank.jpg" alt="Semi-private training session" style="width:100%; height:400px; object-fit:cover; display:block;">
+  </div>
+
+  <!-- PROCESS -->
+  <section class="process reveal">
+    <div class="process-inner">
+      <span class="section-label">How it works</span>
+      <h2>Simple. No surprises.</h2>
+      <p>Here's what happens from the moment you reach out to the moment you're actually training.</p>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <h3>Free Consultation</h3>
+          <p>We talk. No pitch, no pressure. Just a conversation to understand your goals, your history, and whether we're a good fit.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <h3>Intro Session</h3>
+          <p>We move together so I can see how your body works, what you're capable of, and where we need to be careful.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <h3>Your Program</h3>
+          <p>I build a program specifically for you. Not a template. Not a modified version of someone else's plan. Yours.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <h3>Ongoing Refinement</h3>
+          <p>We adjust as we go. Life changes. Bodies change. The program evolves with you, not in spite of you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="who-section reveal">
+    <div class="who-inner">
+      <span class="section-label">Who this is for</span>
+      <h2>You might be a good fit if…</h2>
+      <div class="who-grid">
+        <div class="who-item">
+          <span class="who-check">✓</span>
+          <p>You've tried fitness before and it didn't stick, and you want to understand why</p>
+        </div>
+        <div class="who-item">
+          <span class="who-check">✓</span>
+          <p>Big commercial gyms feel impersonal, overwhelming, or just not designed for you</p>
+        </div>
+        <div class="who-item">
+          <span class="who-check">✓</span>
+          <p>You have old injuries, chronic pain, or movement limitations that other trainers have ignored</p>
+        </div>
+        <div class="who-item">
+          <span class="who-check">✓</span>
+          <p>You're a busy professional who needs training that actually fits around your life</p>
+        </div>
+        <div class="who-item">
+          <span class="who-check">✓</span>
+          <p>You want to feel capable, strong, and healthy — not just look different</p>
+        </div>
+        <div class="who-item">
+          <span class="who-check">✓</span>
+          <p>You want a coach who will be honest with you, even when the honest answer isn't what you hoped to hear</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Not sure if we're a good fit?</h2>
+    <p>That's exactly what the first conversation is for. No commitment, no pressure.</p>
+    <a href="contact.html" class="btn-white">Book Your Free Consultation</a>
+    <p class="cta-note">The first session is really just a conversation.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="48"></a>
+        <p>Private personal training and nutrition coaching in White Plains, NY. Helping real people get genuinely stronger since 2013.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="about.html">About David</a>
+        <a href="coaching.html">Coaching & Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/strongbylee" target="_blank">Instagram</a>
+        <a href="mailto:david@strongbylee.com">david@strongbylee.com</a>
+        <a href="contact.html">Book a Free Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="Strong by Lee" height="36">
+      <span>White Plains, NY · Westchester</span>
+      <span>© 2026 Strong by Lee. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+    document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+  </script>
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+</body>
+</html>

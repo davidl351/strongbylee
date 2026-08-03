@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Strong by Lee | White Plains, NY</title>
+  <meta name="description" content="Honest answers to common questions about training with David at Strong by Lee in White Plains, NY." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .faq-section { max-width: 800px; margin: 0 auto; padding: 96px 48px; }
+    .faq-intro { color: var(--muted); font-size: 1rem; margin-bottom: 64px; line-height: 1.7; }
+
+    .faq-group { margin-bottom: 56px; }
+    .faq-group-label {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 8px; display: block;
+      border-bottom: 1px solid var(--warm); padding-bottom: 12px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--warm);
+    }
+    .faq-question {
+      width: 100%; background: none; border: none;
+      text-align: left; cursor: pointer;
+      padding: 22px 0;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      color: var(--black); line-height: 1.4;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-question.open { color: var(--accent); }
+    .faq-icon {
+      flex-shrink: 0; width: 24px; height: 24px;
+      border: 1px solid currentColor; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; line-height: 1;
+      transition: transform 0.3s;
+    }
+    .faq-question.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-answer.open { max-height: 1000px; }
+    .faq-answer-inner { padding-bottom: 24px; }
+    .faq-answer-inner p {
+      font-size: 0.97rem; color: var(--text);
+      line-height: 1.8; margin-bottom: 12px;
+    }
+    .faq-answer-inner p:last-child { margin-bottom: 0; }
+    .faq-answer-inner ul {
+      margin: 12px 0 12px 20px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .faq-answer-inner ul li {
+      font-size: 0.95rem; color: var(--text); line-height: 1.6;
+    }
+    .faq-answer-inner ul li::marker { color: var(--accent); }
+    .faq-answer-inner em { color: var(--accent); font-style: italic; font-weight: 600; }
+    .faq-answer-inner strong { color: var(--black); font-weight: 600; }
+
+    @media (max-width: 900px) {
+      .faq-section { padding: 72px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="52"></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-close" id="mobileClose">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color: var(--accent);">Free Consultation</a>
+  </div>
+
+  <div class="page-hero">
+    <span class="section-label">FAQ</span>
+    <h1>Questions, answered<br/><em>honestly.</em></h1>
+    <p>No fluff. No sales pitch. Just the things people actually want to know.</p>
+  </div>
+
+  <div class="faq-section reveal">
+    <p class="faq-intro">If you don't find what you're looking for here, reach out directly. I check in with clients almost daily — a question from a stranger is easy.</p>
+
+    <!-- GETTING STARTED -->
+    <div class="faq-group">
+      <span class="faq-group-label">Getting Started</span>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What can I expect from the first session?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Me fumbling as I try my best to make you laugh, feel comfortable, and get to know you.</p>
+            <p>The BIG goal of this session: to see if we will be a good fit. If you hate my personality, the way I look, the polo I wear, you'll leave and never come back. I can have the world's best programming, but if I don't make you feel comfortable, it won't matter.</p>
+            <p>If you like me, we will understand your goals a bit more, see where your fitness levels are, and start crafting a personalized plan. Taking into consideration injuries and mobility issues, we will perform basic postural and strength movements such as push-ups, squats, planks, rows.</p>
+            <p>Next, the prescription: what type of plan will best suit you? How often should you exercise? What should you expect from our coaching relationship? The last part of the session will involve discussing a potential coaching relationship. If we decide to work together — prices and schedules.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What kind of people do you work with?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>All kinds! Green, purple, orange, burgundy!</p>
+            <p>While I am open to having a conversation with almost anyone, we don't make good fits for everyone. My most successful clients are those who:</p>
+            <ul>
+              <li>Want more control over their health and confidence over their fitness</li>
+              <li>May be uncomfortable going to a big, impersonal gym</li>
+              <li>May not have a lot of experience working out</li>
+              <li>Need personalized support from a qualified coach</li>
+              <li>Need a 'break' from their crazy day</li>
+              <li>And, of course, those who want to look better</li>
+            </ul>
+            <p>There's no specific age group, but my client age range is 18 to 80, and the average is around 40.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          I'm so out of shape. Will this work for me?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Almost any exercise program will work if you're out of shape. Seriously. The body will kick into overdrive to 'adapt' to stresses, and it sees exercise as a 'stress' — even though it tends to be a positive one. It's less about the actual workout program, and more about sticking to it. Good coaching can be the difference between sticking to a program and slipping.</p>
+            <p>What's also crucially important is how you're coached. Many people view trainers as musclehead gym junkies who were athletes and only drink protein shakes, yell at their clients, and can't count. While I can't count, I make every effort to make my clients feel comfortable each session. I've noticed the more comfortable I make my clients feel, the more motivated they are and the harder they work. As a result, they see better results.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Are you a pushy salesperson?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>No doubt. If you don't give me your money, I will do everything in my power to make you feel guilty until you do. I may even call my kids (or puppies) to appeal to you! Just kidding.</p>
+            <p>I wouldn't call myself pushy, but I am a salesperson. What am I trying to sell? Myself, and a better, improved version of you. My approach to proposing my services is one of guidance and support. I will not willingly pressure you to invest in anything that isn't of your best interest. On the other hand, I will ask you questions that serve to determine how motivated you are to achieve your goals. After all, the best motivation is an image of a better you.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- THE TRAINING -->
+    <div class="faq-group">
+      <span class="faq-group-label">The Training</span>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What type of training do you do?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Athletic-based strength and conditioning. I take the training I did with the U.S. military and sports, and adapt it to the general fitness population. I find this type of training accomplishes a few things: it keeps my clients strong, mobile, agile, and more confident.</p>
+            <p>I also incorporate a belly-full of core work because most of my clients come to me with postural and lower back problems.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What kind of exercises should I expect?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Exercise selection will largely depend on goals and fitness levels. I believe there are thousands of exercises, but not all of them are created equal. I only use exercises that have been proven to work time and time again. These include:</p>
+            <ul>
+              <li>Squats</li>
+              <li>Deadlifts</li>
+              <li>Push-ups</li>
+              <li>Rows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Are you a boot camp or HIIT-style trainer?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Because my service offering is personalized coaching, I am not a 'boot camp'-style class. High-Intensity Interval Training (HIIT) is a method of training, which I use in my programs — but it's a tool, not the whole program.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you yell, scream, or sound like a drill sergeant?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>OF COURSE! Now get on the floor and give me 20! Just kidding.</p>
+            <p>This is actually a stereotype of trainers that does more harm than good. My goal is to provide constructive criticism in a way that won't make you feel uncomfortable, judged, or berated. I also believe the novelty of yelling while you're doing push-ups wears off very quickly. This isn't the military.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What if I have injuries?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>You'll be in enough pain from my jokes that you'll forget about any injury you have.</p>
+            <p>First, we have to know what type of injury it is. Some injuries are lifestyle-related, sports, and/or genetics. Because I have the privilege of working with general fitness people, I have extensive experience with postural, lower back, and knee dysfunctions. And luckily, I haven't sent anyone to the hospital... Yet.</p>
+            <p>In fact, I am happy to report that many of my clients have experienced relief from their non-life threatening issues, such as back spasms, shoulder, elbow, wrist, and knee pain. After all is said and done, my clients and I have discovered one predominant aspect of pain: a lot of it can be improved through proper strengthening.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONSISTENCY & MOTIVATION -->
+    <div class="faq-group">
+      <span class="faq-group-label">Consistency & Motivation</span>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What about motivation? I feel like I lose it.
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>While there are many reasons why someone may lose motivation, two big ones my clients identify with: not knowing what to do and competing interests. There are many programs out there promising this or that, but they won't deliver anything if you don't stay the course. Coaching can help because it tries to take out a lot of the guesswork: you show up and work, the coach takes care of the programming.</p>
+            <p>'Competing interests' simply means anything else that competes for your time and mental energy: work, hobbies, family. If you have a stressful work or life situation, it'll be harder to stay motivated, because motivation is a mental resource that can be depleted. Have you ever just wanted to lay down and do absolutely nothing after a hard day? That's motivation (willpower) depletion.</p>
+            <p>It's normal to lose motivation when stressed, and you shouldn't feel marginalized when you want to take it easier. The role of the coach will be to personalize a program taking your life situation into account.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Why should I consider personal training?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>There are many reasons to consider personal training. The most resounding reason is this: <strong>accountability</strong>. Do you think people change their behaviors depending on who is watching or involved? If you said yes, then accountability can help modify your behaviors for the better. I've seen MANY people modify their behaviors with just the IDEA that someone would monitor them. Ultimately, you're investing in the most effective, efficient route to an improved you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can't I just do it on my own?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Absolutely. Many people train on their own and are successful. YouTube and Google are rich resources for people who don't require or desire the partnership of a coach. I have helped direct people to resources even though they didn't end up using my services.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How quickly will I see results?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>How quickly you experience results will depend on what goals you want to achieve and how committed you are. For example, if you want to just feel better — the <em>first session</em>. If you want to lose weight — the <em>first week</em>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What happens if I don't get the results I want?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Hrm. You can slap me as hard as you want. Good question that often leads to frustrating answers. I'll go over three things here, though there are more.</p>
+            <p>Firstly, before you start on a coaching relationship, setting expectations is paramount — extremely important. This cannot be understated. Coaching is not a magic bullet. While coaching generally leads to better results than no coaching, setting realistic expectations that take into consideration your situation will spell success or 'failure'. Losing thirty pounds in a year, not a month, is more realistic.</p>
+            <p>Secondly, once realistic expectations are agreed upon, setting a schedule designed to help achieve those goals should be followed. More often than not, clients don't see results because of lack of consistency. Any program can work if there's follow-through.</p>
+            <p>Finally, genetics. We are all different: looks, height, etc. It goes without saying how our bodies look and respond to exercise can be influenced by genetics. Speaking about genetics will be an annoying yet required topic during your journey.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FREQUENCY & SCHEDULING -->
+    <div class="faq-group">
+      <span class="faq-group-label">Frequency & Scheduling</span>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How many days per week should I train?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Regardless of goal, I recommend a minimum of <strong>TWO days</strong> of resistance training (lifting weights). It doesn't necessarily have to be with a coach, but it should be focused, structured, and intense enough to yield results. Lifting would constitute anything that requires heavy objects such as dumbbells, kettlebells... Even yourself.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How many days per week should I exercise overall?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>This is different from the 'how many days should I lift' question, but it's an expansion. I highly suggest all clients, regardless of goals, to exercise a minimum of <strong>FOUR days per week</strong>. This includes lifting and some form of aerobic exercise, such as brisk walking, jogging, biking, hiking, swimming.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How long should training sessions be?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Length and intensity of resistance training sessions are highly dependent on the client's fitness levels. For people JUST starting out, no more than 30 minutes. For those with some experience, 45 to 60.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What's the minimum length of time you suggest?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>FOREVAAAAAAA.</p>
+            <p>While not all goals will take the same amount of time to achieve, I highly suggest all clients get involved with a 12-week, structured program. This length of time allows ample time to see and feel significant results. Generally speaking, it takes people 12 weeks to achieve realistic goals, and 6 to 12 months to reach loftier ones if consistent.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I contact you outside of our sessions?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>No way! You really want me to annoy you any more than I would during our sessions? Just kidding. I check in with my clients on an almost daily basis to see how they're doing and if they're having problems, and I HIGHLY encourage them to do the same.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PRICING & LOGISTICS -->
+    <div class="faq-group">
+      <span class="faq-group-label">Pricing & Logistics</span>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Isn't personal training expensive?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>It could be. But it may also not be. Budget concerns are certainly valid. Obviously, we don't want to break anyone's bank.</p>
+            <p>On the other hand, I have clients who train privately 2-3 times per week, and say a $200 gym membership is expensive... Because they rarely go there. My belief is how much value you receive from a product or service. If you think it's very important to have a coach who cares about your health and helps you achieve your goals, would the price be worth it?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How does your pricing work?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>You must participate in a free intro session to start your personalized plan. From there, you'll have two options:</p>
+            <ul>
+              <li>A 12-week personalized plan where you meet with your coach a certain number of times per week</li>
+              <li>Paying for sessions individually</li>
+            </ul>
+            <p>It goes without saying that I'd prefer people to be on a consistent program for 12 weeks, but I understand if people would rather pay as they go — though individual sessions will be more expensive.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Is nutrition included?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Basic nutrition recommendations and programming will be included in all 12-week programs. This includes:</p>
+            <ul>
+              <li>Shopping lists</li>
+              <li>Eating out</li>
+              <li>How to set up meals</li>
+              <li>Cooking at home</li>
+              <li>Supplements</li>
+            </ul>
+            <p>Some clients may want EXTRA nutrition attention, so those will be an additional charge. After all, my funny jokes come at a price.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What if I'm not happy with my experience?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>While I'll make every attempt to ensure total satisfaction, I also understand my services (and personality) aren't for everyone. If for whatever reason you're not satisfied within the first 30 days, I will offer a full <strong>REFUND</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- THE STUDIO -->
+    <div class="faq-group">
+      <span class="faq-group-label">The Studio</span>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How are you different from joining a gym?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>You get a coach. Maybe some corny jokes, too. Unless you work with a trainer at a gym, you won't receive personalized attention, accountability, and actionable steps to help you reach your goals in the most efficient way possible.</p>
+            <p>A smaller consideration for you but a big one for trainers is this: having to compete for space and equipment with gym members who are paying WAY LESS than you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How is a trainer at a private spot different than a trainer at a gym?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Good and tough question. I used to be a trainer at a big, commercial gym, and I did well there. While there are many reasons why you'd want to hire a coach at a private spot, the biggest is this: so you don't have to train at a big, commercial gym. Many of my clients come to me because they enjoy the atmosphere of a private spot more.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What separates you from other trainers?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>What, asides from my coolness, confidence, and charm? You want more reasons?</p>
+            <p>When asked what separates me from others, my clients tended to use two words: <em>comfortable</em> and <em>engaging</em>. My clients said I made them feel comfortable and not judged from day one. I also engage with my clients at a level where they feel genuinely cared for.</p>
+            <p>Sure, many people get great results from my programming (just look at the reviews). They get great workouts. They feel better after they're done. But according to my clients, they feel "valued".</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Are your Google reviews bought or bots?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>About half. I got them for cheap.</p>
+            <p>I think most people do not leave reviews. If they do, they're more likely to leave negative ones. Based on my experience, most people who leave positive reviews genuinely mean it — they just needed a little nudge to actually write it down. So if you've worked with me and haven't left one yet, now's your chance to make me look good.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <section class="cta-section">
+    <h2>Still have questions?</h2>
+    <p>The fastest way to get answers is a conversation. It's free, and there's no obligation.</p>
+    <a href="contact.html" class="btn-white">Book Your Free Consultation</a>
+    <p class="cta-note">You know what's cheap and easy? Talk.</p>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="48"></a>
+        <p>Private personal training and nutrition coaching in White Plains, NY. Helping real people get genuinely stronger since 2013.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="about.html">About David</a>
+        <a href="coaching.html">Coaching & Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/strongbylee" target="_blank">Instagram</a>
+        <a href="mailto:david@strongbylee.com">david@strongbylee.com</a>
+        <a href="contact.html">Book a Free Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="Strong by Lee" height="36">
+      <span>White Plains, NY · Westchester</span>
+      <span>© 2026 Strong by Lee. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+    document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = btn.classList.contains('open');
+        document.querySelectorAll('.faq-question').forEach(b => {
+          b.classList.remove('open');
+          b.nextElementSibling.classList.remove('open');
+        });
+        if (!isOpen) {
+          btn.classList.add('open');
+          answer.classList.add('open');
+        }
+      });
+    });
+  </script>
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+</body>
+</html>

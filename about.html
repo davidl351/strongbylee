@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About David — Strong by Lee | White Plains, NY</title>
+  <meta name="description" content="The real story behind Strong by Lee. David is a registered dietitian, Air Force veteran, and personal trainer in White Plains, NY who doesn't love working out — and coaches people who feel the same way." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .story-section {
+      max-width: 760px; margin: 0 auto;
+      padding: 96px 48px;
+    }
+    .story-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--black); margin-bottom: 24px;
+      line-height: 1.25;
+    }
+    .story-section p {
+      font-size: 1.05rem; line-height: 1.85;
+      color: var(--text); margin-bottom: 20px;
+    }
+    .story-section p:last-child { margin-bottom: 0; }
+
+    .story-divider {
+      width: 48px; height: 3px;
+      background: var(--accent); margin: 48px auto;
+    }
+
+    .story-pull {
+      background: var(--warm);
+      border-left: 4px solid var(--accent);
+      padding: 32px 40px; margin: 48px 0; border-radius: 0 2px 2px 0;
+    }
+    .story-pull p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 1.3rem;
+      color: var(--black); line-height: 1.5; margin: 0;
+    }
+
+    .philosophy {
+      background: var(--black); padding: 96px 80px;
+    }
+    .philosophy-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .philosophy-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: #fff; margin-bottom: 24px; line-height: 1.25;
+    }
+    .philosophy-left p { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.8; }
+    .philosophy-left p + p { margin-top: 16px; }
+    .philosophy-right { display: flex; flex-direction: column; gap: 28px; }
+    .phil-item {
+      border-left: 2px solid var(--accent);
+      padding-left: 24px;
+    }
+    .phil-item h3 {
+      font-size: 0.88rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 8px;
+    }
+    .phil-item p { color: rgba(255,255,255,0.55); font-size: 0.93rem; line-height: 1.7; }
+
+    .credentials {
+      padding: 96px 80px; background: var(--warm);
+    }
+    .credentials-inner { max-width: 1100px; margin: 0 auto; }
+    .credentials-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--black); margin-bottom: 48px;
+    }
+    .creds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .cred-card {
+      background: var(--offwhite); padding: 36px 32px; border-radius: 2px;
+    }
+    .cred-icon {
+      font-size: 1.8rem; margin-bottom: 16px; display: block;
+    }
+    .cred-card h3 {
+      font-size: 1rem; font-weight: 600;
+      color: var(--black); margin-bottom: 8px;
+    }
+    .cred-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    @media (max-width: 900px) {
+      .story-section { padding: 72px 32px; }
+      .philosophy { padding: 72px 32px; }
+      .philosophy-inner { grid-template-columns: 1fr; gap: 48px; }
+      .credentials { padding: 72px 32px; }
+      .creds-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="52"></a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-close" id="mobileClose">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color: var(--accent);">Free Consultation</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <span class="section-label">The real story</span>
+    <h1>I became a trainer<br/><em>by accident.</em></h1>
+    <p>Here's what actually happened — and why it still drives everything I do.</p>
+  </div>
+
+  <!-- STORY -->
+  <div class="story-section">
+    <h2>I was not the athletic kid.</h2>
+    <p>Growing up, sports weren't my thing. Confidence wasn't exactly my thing either. I was skinny, unsure of myself, and about as far from a gym rat as you could get. I didn't have a passion for fitness. I had a general discomfort with who I was physically, which is a different thing entirely.</p>
+    <p>After high school, I joined the United States Air Force — not out of patriotic calling, but out of practicality. No money for college. Not ready for the workforce. The military seemed like a reasonable third option.</p>
+
+    <div class="story-divider"></div>
+
+    <h2>The accident.</h2>
+    <p>Once you get past a certain rank in the Air Force — E-4, Senior Airman — promotion requires more than just doing your job. You need extracurricular points. Activities. Involvement. I had none of those things.</p>
+    <p>What I did notice was that you could become a Physical Training Leader. It seemed like the lowest barrier to entry. Tell people to run. Do some push-ups. How hard could it be?</p>
+    <p>What I didn't fully appreciate was that part of the role meant helping service members who were struggling with their fitness — people who were at risk of failing their physical fitness exams. In the military, failing twice means getting discharged. That's someone's career. Sometimes their livelihood. Sometimes their sense of identity.</p>
+
+    <div class="story-pull">
+      <p>"He knelt down, grabbed my hands, and cried. I didn't know it then, but that was the moment I became a coach."</p>
+    </div>
+
+    <p>There was one airman in particular. He'd already failed once. One more failure and he was out. We worked together over several months — consistently, carefully, building up what his body could do without breaking what it couldn't.</p>
+    <p>He passed. Barely. By the skin of his teeth, as they say.</p>
+    <p>And then he knelt down, grabbed my hands, and cried. And thanked me.</p>
+    <p>I didn't fully understand what had happened in that moment. I just knew that helping someone get through something genuinely hard — something with real stakes — felt like nothing else I'd experienced. When my service ended, I knew what I was going to do next.</p>
+
+    <div class="story-divider"></div>
+
+    <h2>Why I still do it.</h2>
+    <p>I want to be straight with you about something: I still don't love working out. I'm 39 years old, 5'7", 155 pounds. I didn't play sports. I'm not chasing aesthetics or personal records.</p>
+    <p>I train because I want to stay strong and healthy for the things in my life that actually matter. Like being able to run with my kids without getting winded. Throw a ball. Wrestle on the floor. Be physically present for them in the ways that count.</p>
+    <p>That's it. That's my why.</p>
+    <p>And I think that's why so many of my clients feel understood when they walk in — because I'm not speaking to them from some elite athletic pedestal. I'm standing right next to them, doing the same uncomfortable thing, for the same very human reasons.</p>
+
+    <div class="story-divider"></div>
+
+    <h2>What I've learned along the way.</h2>
+    <p>At some point I got curious enough to enter a powerlifting competition. My wife did too. Neither of us knew what we were doing. We just showed up consistently and did the work — and it turned out that was enough. I try to remember that when a client tells me they're not athletic enough for this.</p>
+    <p>I also train on the same schedule as my clients — deliberately. A lot of trainers work out every day, sometimes twice. That's not my clients' reality, and it's not mine either.</p>
+    <p>A core philosophy of mine: meet my clients where they are. If they can only train two or three times a week, will take vacations, face setbacks, and have weeks when the gym simply isn't the priority — but still want to move in the right direction — then I should be able to work within those same constraints. And I do.</p>
+  </div>
+
+  <!-- PHOTO STRIP -->
+  <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; background: var(--black);">
+    <img src="images/studio-coaching.jpg" alt="David coaching in the Strong by Lee studio" style="width:100%; aspect-ratio:1; object-fit:cover; object-position: center top; display:block;">
+    <img src="images/coaching-laughing.jpg" alt="David with a client" style="width:100%; aspect-ratio:1; object-fit:cover; display:block;">
+    <img src="images/coaching-floor.jpg" alt="David coaching on the floor" style="width:100%; aspect-ratio:1; object-fit:cover; display:block;">
+  </div>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy reveal">
+    <div class="philosophy-inner">
+      <div class="philosophy-left">
+        <span class="section-label">How I coach</span>
+        <h2>Meet people where they are. Not where you wish they were.</h2>
+        <p>After a decade of working with real people — not athletes, not fitness enthusiasts, just regular people with full lives — I've learned that most fitness programs fail not because of bad programming, but because they ignore the human being inside the program.</p>
+        <p>My job isn't just to design workouts. It's to understand what's actually going on with you — your schedule, your history, your hesitations — and build something that fits your life, not the other way around.</p>
+      </div>
+      <div class="philosophy-right">
+        <div class="phil-item">
+          <h3>Honest Expectation Setting</h3>
+          <p>Fitness is uncomfortable and takes time. I won't pretend otherwise. But I'll tell you exactly what to expect and be there through all of it.</p>
+        </div>
+        <div class="phil-item">
+          <h3>Personalized, Not Templated</h3>
+          <p>Every program is built around you specifically — your body, your goals, your injuries, your life. Not a modified version of someone else's plan.</p>
+        </div>
+        <div class="phil-item">
+          <h3>The Relationship Is the Program</h3>
+          <p>Consistency comes from connection. My clients stay not just because the workouts work — but because they genuinely enjoy showing up.</p>
+        </div>
+        <div class="phil-item">
+          <h3>Nutrition Is Part of It</h3>
+          <p>As a registered dietitian, I don't hand off the nutrition conversation to someone else. It's built into how I coach from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="credentials reveal">
+    <div class="credentials-inner">
+      <span class="section-label">Background</span>
+      <h2>The credentials, for those who want them.</h2>
+      <div class="creds-grid">
+        <div class="cred-card">
+          <span class="cred-icon">🎖️</span>
+          <h3>United States Air Force</h3>
+          <p>Veteran and former Physical Training Leader. Where the coaching began — helping service members pass the tests that mattered to them.</p>
+        </div>
+        <div class="cred-card">
+          <span class="cred-icon">🥗</span>
+          <h3>Registered Dietitian (RD)</h3>
+          <p>A credential that takes years to earn and means I can bridge training and nutrition in ways most personal trainers simply can't.</p>
+        </div>
+        <div class="cred-card">
+          <span class="cred-icon">📍</span>
+          <h3>10+ Years · 1,000+ Clients</h3>
+          <p>Based in White Plains, NY, serving the Westchester area. A decade of working with people across every age, fitness level, and starting point imaginable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to have a conversation?</h2>
+    <p>No pressure. No hard sell. Just a chance to talk and see if we're a good fit.</p>
+    <a href="contact.html" class="btn-white">Book Your Free Consultation</a>
+    <p class="cta-note">The first session is really just a conversation.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="48"></a>
+        <p>Private personal training and nutrition coaching in White Plains, NY. Helping real people get genuinely stronger since 2013.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="about.html">About David</a>
+        <a href="coaching.html">Coaching & Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/strongbylee" target="_blank">Instagram</a>
+        <a href="mailto:david@strongbylee.com">david@strongbylee.com</a>
+        <a href="contact.html">Book a Free Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="Strong by Lee" height="36">
+      <span>White Plains, NY · Westchester</span>
+      <span>© 2026 Strong by Lee. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+    document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+  </script>
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+</body>
+</html>

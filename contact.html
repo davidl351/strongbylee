@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Strong by Lee | White Plains, NY</title>
+  <meta name="description" content="Reach out to David at Strong by Lee in White Plains, NY to book your free consultation." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact-section {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 80vh; padding-top: 80px;
+    }
+    .contact-left {
+      background: var(--black);
+      padding: 96px 72px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .contact-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: #fff; margin-bottom: 24px; line-height: 1.25;
+    }
+    .contact-left h2 em { color: var(--accent); font-style: italic; }
+    .contact-left p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem; line-height: 1.8; margin-bottom: 48px;
+    }
+    .contact-details { display: flex; flex-direction: column; gap: 24px; }
+    .contact-detail {
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .contact-detail-icon {
+      font-size: 1.2rem; margin-top: 2px; flex-shrink: 0;
+    }
+    .contact-detail-text h4 {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 4px;
+    }
+    .contact-detail-text p, .contact-detail-text a {
+      color: rgba(255,255,255,0.6); font-size: 0.95rem;
+      text-decoration: none; line-height: 1.6;
+    }
+    .contact-detail-text a:hover { color: var(--accent); }
+
+    .contact-right {
+      background: var(--offwhite);
+      padding: 96px 72px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .contact-right h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--black); margin-bottom: 8px;
+    }
+    .contact-right > p {
+      color: var(--muted); font-size: 0.93rem;
+      margin-bottom: 40px; line-height: 1.6;
+    }
+
+    .form-group { margin-bottom: 24px; }
+    .form-group label {
+      display: block; font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--warm);
+      border-radius: 2px;
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.97rem; color: var(--text);
+      outline: none; transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit {
+      width: 100%; padding: 16px;
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 2px; font-family: 'Inter', sans-serif;
+      font-size: 0.88rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.2s; margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--accent-dark); }
+    .form-note {
+      font-size: 0.8rem; color: var(--muted);
+      text-align: center; margin-top: 16px; font-style: italic;
+    }
+    .success-message {
+      display: none; background: var(--warm);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px; border-radius: 0 2px 2px 0;
+      margin-top: 24px;
+    }
+    .success-message p { font-size: 0.95rem; color: var(--text); }
+
+    @media (max-width: 900px) {
+      .contact-section { grid-template-columns: 1fr; padding-top: 80px; }
+      .contact-left, .contact-right { padding: 64px 32px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="52"></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-close" id="mobileClose">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <section class="contact-section reveal">
+    <div class="contact-left">
+      <span class="section-label">Get in touch</span>
+      <h2>You know what's cheap and easy? <em>A conversation.</em></h2>
+      <p>Don't take my word for any of this. Reach out, tell me a little about what you're looking for, and we'll figure out if we're a good fit. No pressure, no hard sell.</p>
+
+      <div class="contact-details">
+        <div class="contact-detail">
+          <span class="contact-detail-icon">📍</span>
+          <div class="contact-detail-text">
+            <h4>Location</h4>
+            <p>White Plains, NY<br/>Westchester Area</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">✉️</span>
+          <div class="contact-detail-text">
+            <h4>Email</h4>
+            <a href="mailto:david@strongbylee.com">david@strongbylee.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">📸</span>
+          <div class="contact-detail-text">
+            <h4>Instagram</h4>
+            <a href="https://instagram.com/strongbylee" target="_blank">@strongbylee</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">🌐</span>
+          <div class="contact-detail-text">
+            <h4>Website</h4>
+            <a href="index.html">strongbylee.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <h3>Book your free consultation</h3>
+      <p>Fill this out and I'll be in touch within 24 hours.</p>
+
+      <form id="contactForm" action="https://formspree.io/f/mzdnrkly" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="interest">What are you most interested in?</label>
+          <select id="interest" name="interest">
+            <option value="">Select an option...</option>
+            <option value="1on1">Private 1-on-1 Training</option>
+            <option value="semi-private">Semi-Private Training</option>
+            <option value="nutrition">Nutrition Coaching</option>
+            <option value="both">Training + Nutrition</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="trained-before">Have you worked with a personal trainer before?</label>
+          <select id="trained-before" name="trained-before">
+            <option value="">Select an option...</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="long-ago">Yes, but it was a long time ago</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number <span style="font-weight:400; text-transform:none; letter-spacing:0; color: var(--muted);">(optional — only if you prefer a call)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="(914) 555-0123" />
+        </div>
+
+        <div class="form-group">
+          <label for="injuries">Do you have any injuries or physical limitations I should know about?</label>
+          <textarea id="injuries" name="injuries" placeholder="Back pain, knee issues, shoulder problems — anything that affects how you move. Don't hold back, this helps me build a better plan." style="min-height: 90px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="schedule">What does your schedule look like?</label>
+          <select id="schedule" name="schedule">
+            <option value="">Select an option...</option>
+            <option value="weekday-mornings">Weekday mornings</option>
+            <option value="weekday-afternoons">Weekday afternoons</option>
+            <option value="weekday-evenings">Weekday evenings</option>
+            <option value="weekends">Weekends</option>
+            <option value="flexible">Flexible</option>
+            <option value="mixed">Mix of the above</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="challenge">What's your biggest challenge?</label>
+          <textarea id="challenge" name="challenge" placeholder="What's been getting in the way? Consistency, motivation, not knowing where to start, injuries, time — whatever comes to mind." style="min-height: 90px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell me a little about yourself and what you're hoping to achieve</label>
+          <textarea id="message" name="message" placeholder="Where are you starting from? What's brought you here? What have you tried before? The more context you give me, the better I can help."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="referral">How did you hear about Strong by Lee?</label>
+          <select id="referral" name="referral">
+            <option value="">Select an option...</option>
+            <option value="google">Google Search</option>
+            <option value="google-maps">Google Maps</option>
+            <option value="instagram">Instagram</option>
+            <option value="referral">Friend or Family Referral</option>
+            <option value="existing-client">Current or Past Client</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <button type="submit" class="form-submit">Send Message</button>
+        <p class="form-note">I typically respond within 24 hours. No spam, ever.</p>
+      </form>
+
+      <div class="success-message" id="successMessage">
+        <p>Got it — thank you. I'll be in touch within 24 hours. In the meantime, feel free to check out the <a href="faq.html" style="color: var(--accent);">FAQ</a> if you have questions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <iframe
+    class="map-embed"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48156.39444625807!2d-73.80418!3d41.03398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2933de3e4fb4b%3A0xa1df43e1c8be918c!2sWhite%20Plains%2C%20NY!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Strong by Lee — White Plains, NY">
+  </iframe>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="48"></a>
+        <p>Private personal training and nutrition coaching in White Plains, NY. Helping real people get genuinely stronger since 2013.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="about.html">About David</a>
+        <a href="coaching.html">Coaching & Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/strongbylee" target="_blank">Instagram</a>
+        <a href="mailto:david@strongbylee.com">david@strongbylee.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="Strong by Lee" height="36">
+      <span>White Plains, NY · Westchester</span>
+      <span>© 2026 Strong by Lee. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+    document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = this;
+      const data = new FormData(form);
+      try {
+        const response = await fetch('https://formspree.io/f/mzdnrkly', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('successMessage').style.display = 'block';
+        } else {
+          alert('Something went wrong. Please email david@strongbylee.com directly.');
+        }
+      } catch (error) {
+        alert('Something went wrong. Please email david@strongbylee.com directly.');
+      }
+    });
+  </script>
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+</body>
+</html>

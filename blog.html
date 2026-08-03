@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Strong by Lee | White Plains, NY</title>
+  <meta name="description" content="Honest, practical writing on training, nutrition, and sticking with it — from David Lee, RD and coach at Strong by Lee in White Plains, NY." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .blog-section { max-width: 1000px; margin: 0 auto; padding: 96px 48px; }
+    .blog-intro { color: var(--muted); font-size: 1rem; margin-bottom: 64px; line-height: 1.7; max-width: 640px; }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 48px;
+    }
+    .blog-card { display: flex; flex-direction: column; }
+    .blog-card-img {
+      aspect-ratio: 16/10; overflow: hidden; border-radius: 2px;
+      margin-bottom: 20px; background: var(--warm);
+    }
+    .blog-card-img img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.4s ease;
+    }
+    .blog-card:hover .blog-card-img img { transform: scale(1.03); }
+    .blog-card-meta {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+    }
+    .blog-card-meta span { color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: normal; }
+    .blog-card h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700;
+      color: var(--black); line-height: 1.3; margin-bottom: 10px;
+    }
+    .blog-card p {
+      color: var(--text); font-size: 0.95rem; line-height: 1.65; margin-bottom: 16px;
+    }
+    .blog-card a.blog-card-link {
+      color: var(--text); text-decoration: none; display: block;
+    }
+    .blog-card a.blog-card-link:hover h3 { color: var(--accent); }
+    .blog-card-read {
+      font-size: 0.82rem; font-weight: 600; color: var(--accent);
+      letter-spacing: 0.03em;
+    }
+
+    /* Featured first post spans full width */
+    .blog-card--featured {
+      grid-column: 1 / -1;
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+    }
+    .blog-card--featured .blog-card-img { margin-bottom: 0; aspect-ratio: 4/3; }
+    .blog-card--featured h3 { font-size: 1.9rem; }
+
+    @media (max-width: 900px) {
+      .blog-section { padding: 72px 32px; }
+      .blog-grid { grid-template-columns: 1fr; gap: 48px; }
+      .blog-card--featured { grid-template-columns: 1fr; gap: 20px; }
+      .blog-card--featured .blog-card-img { order: -1; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="52"></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-close" id="mobileClose">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color: var(--accent);">Free Consultation</a>
+  </div>
+
+  <div class="page-hero">
+    <span class="section-label">The Blog</span>
+    <h1>Writing on training,<br/>nutrition, and <em>actually sticking with it.</em></h1>
+    <p>No fad diets, no fear-mongering. Just what I've learned coaching real people in White Plains for over a decade.</p>
+  </div>
+
+  <div class="blog-section reveal">
+    <p class="blog-intro">New posts roughly every few weeks. If you'd rather have these land in your inbox, the sign-up is on the <a href="contact.html" class="btn-ghost">contact page</a>.</p>
+
+    <div class="blog-grid">
+
+      <!-- ============================================================
+           FEATURED / MOST RECENT POST
+           Duplicate a .blog-card block below for each additional post.
+           Keep newest posts first.
+           ============================================================ -->
+      <article class="blog-card blog-card--featured">
+        <a href="blog-post-template.html" class="blog-card-link">
+          <div class="blog-card-img">
+            <img src="images/coaching-convo.jpg" alt="David coaching a client" />
+          </div>
+        </a>
+        <div>
+          <a href="blog-post-template.html" class="blog-card-link">
+            <div class="blog-card-meta">Nutrition <span>· Aug 2026 · 5 min read</span></div>
+            <h3>Replace This With Your Real Post Title</h3>
+            <p>A one-to-two sentence teaser written for someone who has never heard of you — not a subscriber who already knows the backstory. This is placeholder copy; see blog-post-template.html for the full layout.</p>
+          </a>
+          <a href="blog-post-template.html" class="blog-card-read">Read the post →</a>
+        </div>
+      </article>
+
+      <!-- Example of a second, standard-width card. Copy this block for each older post. -->
+      <article class="blog-card">
+        <a href="#" class="blog-card-link">
+          <div class="blog-card-img">
+            <img src="images/coaching-laughing.jpg" alt="Placeholder post image" />
+          </div>
+          <div class="blog-card-meta">Coaching <span>· Jul 2026 · 4 min read</span></div>
+          <h3>Second Placeholder Post Title</h3>
+          <p>Short teaser text goes here. Replace image, category, date, title, and link when this post is ready.</p>
+        </a>
+        <a href="#" class="blog-card-read">Read the post →</a>
+      </article>
+
+      <article class="blog-card">
+        <a href="#" class="blog-card-link">
+          <div class="blog-card-img">
+            <img src="images/group-plank.jpg" alt="Placeholder post image" />
+          </div>
+          <div class="blog-card-meta">Mindset <span>· Jun 2026 · 3 min read</span></div>
+          <h3>Third Placeholder Post Title</h3>
+          <p>Short teaser text goes here. Replace image, category, date, title, and link when this post is ready.</p>
+        </a>
+        <a href="#" class="blog-card-read">Read the post →</a>
+      </article>
+
+    </div>
+  </div>
+
+  <section class="cta-section">
+    <h2>Want this in your inbox?</h2>
+    <p>Get new posts and the occasional honest thought, sent straight to you — no spam, unsubscribe any time.</p>
+    <a href="contact.html" class="btn-white">Get In Touch</a>
+    <p class="cta-note">Or just come back here whenever you feel like it.</p>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="48"></a>
+        <p>Private personal training and nutrition coaching in White Plains, NY. Helping real people get genuinely stronger since 2013.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="about.html">About David</a>
+        <a href="coaching.html">Coaching & Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/strongbylee" target="_blank">Instagram</a>
+        <a href="mailto:david@strongbylee.com">david@strongbylee.com</a>
+        <a href="contact.html">Book a Free Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="Strong by Lee" height="36">
+      <span>White Plains, NY · Westchester</span>
+      <span>© 2026 Strong by Lee. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+    document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => el.classList.add('hidden'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('hidden');
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
