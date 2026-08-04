@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will Carbs Make Me Fat? — Strong by Lee</title>
+  <meta name="description" content="In over a decade as a coach and Registered Dietitian, I have never met a person who got fat from eating carbohydrates alone. Here's what's actually going on." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .post-hero {
+      background: var(--black);
+      padding: 140px 80px 80px;
+      text-align: center;
+    }
+    .post-hero .post-category {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 20px; display: block;
+    }
+    .post-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 900; color: #fff;
+      line-height: 1.15; margin-bottom: 24px;
+      max-width: 800px; margin-left: auto; margin-right: auto;
+    }
+    .post-hero h1 em { color: var(--accent); font-style: italic; }
+    .post-meta {
+      font-size: 0.78rem; color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .post-meta span + span::before { content: ' · '; }
+
+    .post-featured-image {
+      width: 100%; max-height: 520px;
+      overflow: hidden; background: var(--warm);
+      display: flex; align-items: center; justify-content: center;
+      min-height: 320px;
+    }
+    .post-featured-image img {
+      width: 100%; height: 520px; object-fit: cover; display: block;
+    }
+    .post-featured-image-placeholder {
+      font-size: 0.78rem; color: var(--muted);
+      text-align: center; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 48px;
+    }
+
+    .post-body {
+      max-width: 720px; margin: 0 auto;
+      padding: 72px 48px 96px;
+    }
+    .post-body p {
+      font-size: 1.05rem; line-height: 1.85;
+      color: var(--text); margin-bottom: 24px;
+    }
+    .post-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--black); margin-top: 56px; margin-bottom: 20px;
+      line-height: 1.25;
+    }
+    .post-body h3 {
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--black); margin-top: 32px; margin-bottom: 12px;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 24px 24px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .post-body li {
+      font-size: 1.05rem; line-height: 1.75; color: var(--text);
+    }
+    .post-body strong { color: var(--black); font-weight: 600; }
+    .post-body em { color: var(--accent); font-style: italic; }
+
+    .post-pull {
+      background: var(--warm);
+      border-left: 4px solid var(--accent);
+      padding: 28px 36px; margin: 40px 0;
+      border-radius: 0 2px 2px 0;
+    }
+    .post-pull p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 1.2rem;
+      color: var(--black); line-height: 1.5; margin: 0;
+    }
+
+    .post-table {
+      width: 100%; border-collapse: collapse;
+      margin: 24px 0 32px; font-size: 0.97rem;
+    }
+    .post-table th {
+      background: var(--black); color: #fff;
+      padding: 12px 16px; text-align: left;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .post-table td {
+      padding: 12px 16px; border-bottom: 1px solid var(--warm);
+      color: var(--text); vertical-align: top;
+    }
+    .post-table tr:nth-child(even) td { background: var(--warm); }
+
+    .post-signoff {
+      margin-top: 56px; padding-top: 32px;
+      border-top: 1px solid var(--warm);
+    }
+    .post-signoff p {
+      font-size: 0.97rem; color: var(--muted);
+      font-style: italic; margin-bottom: 8px;
+    }
+    .post-signoff strong { color: var(--accent); font-style: normal; }
+
+    .post-nav {
+      background: var(--warm); padding: 48px 80px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .post-nav a {
+      font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); text-decoration: none;
+      border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+    }
+
+    @media (max-width: 900px) {
+      .post-hero { padding: 120px 32px 64px; }
+      .post-body { padding: 48px 32px 72px; }
+      .post-nav { padding: 48px 32px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="52"></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-close" id="mobileClose">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color: var(--accent);">Free Consultation</a>
+  </div>
+
+  <!-- POST HERO -->
+  <div class="post-hero">
+    <span class="post-category">Nutrition</span>
+    <h1>Will Carbs Make Me <em>Fat?</em></h1>
+    <div class="post-meta">
+      <span>David Lee, RD</span>
+      <span>August 3, 2026</span>
+      <span>6 min read</span>
+    </div>
+  </div>
+
+  <!-- FEATURED IMAGE -->
+  <div class="post-featured-image">
+    <p class="post-featured-image-placeholder">Post image goes here</p>
+  </div>
+
+  <!-- POST BODY -->
+  <article class="post-body">
+
+    <p>My clients and I talk about carbohydrates a lot — probably more than any other topic.</p>
+
+    <p><em>"Carbs make me fat."</em><br/>
+    <em>"Carbs make me moody."</em><br/>
+    <em>"I heard low carbs make me lose more weight."</em><br/>
+    <em>"I don't really need carbs."</em><br/>
+    <em>"What are carbs?"</em></p>
+
+    <p>That last one might surprise you, but you'd be surprised how many people don't actually know much about carbohydrates. We're not taught the science of nutrition in school, so most of what we "know" comes from our parents — who probably learned it the same way — or a random article that landed in our inbox at the right, or wrong, time.</p>
+
+    <p>Over the past 20 years, the blame for obesity has shifted from fat to carbs. First it was the low-fat craze. Now it's low-carb. I'm not a believer in either extreme. Most people simply aren't given the guidance to figure out what's actually best for them. Misinformation plus no guidance is a reliable recipe for frustration and stalled progress.</p>
+
+    <div class="post-pull">
+      <p>In my years as a coach and Registered Dietitian, I have never met a person who got fat from eating carbohydrates alone.</p>
+    </div>
+
+    <h2>It's Rarely the Carb — It's What's Next to It</h2>
+
+    <p>When most people picture "carbs," they picture pasta. Yes, pasta is a starch. But what else is usually on the plate? Sauce. Meat. Cheese. Marinara, vodka sauce, Alfredo — these are heavy in fat: oil, butter, cream, cheese. Same story with pizza: the dough is a carb, but the cheese, oil, and toppings are doing a lot of the caloric work.</p>
+
+    <p>That matters because fat is more calorically dense than carbohydrate — 9 calories per gram versus 4. Gram for gram, over-consuming fat adds up faster than over-consuming carbs. This isn't the whole story on weight gain, but it's a piece people consistently miss.</p>
+
+    <p>Carbohydrates, done right, are genuinely body-friendly. They're the body and brain's preferred fuel during high-intensity activity, and they play a real role in stabilizing mood and energy — things that matter for quality of life, not just performance.</p>
+
+    <h2>Why Carbs Rarely Turn Into Fat</h2>
+
+    <p>The average body stores 400–500 grams of carbohydrate as glycogen, in the liver and muscles. Fat tissue can't store glycogen. If you consistently eat well beyond that 400–500g range and you're inactive, your body will convert some of the excess to fat — a process called glycogen spillover. But for most people, actually hitting that threshold day after day is uncommon.</p>
+
+    <p>What's far more common: people who are overweight tend to have a high absolute fat intake, largely independent of how active they are. The body doesn't reach for fat as fuel during hard exercise, so a high-fat diet doesn't get "used up" by training the way carbs do.</p>
+
+    <p>Put simply: most people don't overeat carbs in isolation. Weight gain shows up when low activity, high fat intake, and relatively high carb intake happen together.</p>
+
+    <h2>The Three Types of Carbohydrates</h2>
+
+    <p>All carbs eventually break down into simple sugars — galactose (mainly from dairy), fructose (mainly from fruit), and glucose (mainly from starches).</p>
+
+    <h3>Non-Starchy Vegetables</h3>
+    <p>Under 5g of carbs per 1-cup serving — essentially unlimited in a normal eating plan. Low sugar, high water, high fiber.</p>
+    <p>Asparagus, broccoli, green beans, cauliflower, Swiss chard, collard greens, kale, lettuce, spinach, beet greens, mustard greens, dandelion greens, watercress, cabbage.</p>
+
+    <h3>Fruits</h3>
+    <p>A great addition — mostly water, plus vitamins, minerals, and fiber. Fructose has to be processed by the liver before it reaches the bloodstream, which puts a natural ceiling on how much benefit you get from fruit. Generally around 4 servings a day works well — one cup or one piece per serving.</p>
+    <p>Orange, apple, pear, apricot, banana, kiwi, pineapple, mango, papaya.</p>
+    <p>Two exceptions worth noting: <strong>coconut</strong> is high enough in fat that we get coconut oil from it. <strong>Avocado</strong> technically has carbs, but over 75% is fiber — a whole avocado runs about 30g of fat and 17g of carbs, 14 of which is fiber. Both are really fat sources.</p>
+
+    <h3>Starches</h3>
+    <p>Starches get the worst reputation, and there's a reason: loaded baked potatoes, pasta Alfredo, pizza — these are delicious specifically because they combine fat, carbohydrate, and salt. That combination, not the starch itself, is what makes these foods easy to overeat.</p>
+    <p>Grains, rice, oatmeal, potatoes, legumes, beans, quinoa, taro, jicama.</p>
+
+    <h2>How Many Carbs Do You Actually Need?</h2>
+
+    <p>It depends entirely on activity level. These are general starting points, not prescriptions:</p>
+
+    <table class="post-table">
+      <thead>
+        <tr>
+          <th>Activity Level</th>
+          <th>Daily Carb Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Minimally active / no training</td>
+          <td>Up to ~150g/day</td>
+        </tr>
+        <tr>
+          <td>Training 3–4 days/week</td>
+          <td>Up to ~250g/day</td>
+        </tr>
+        <tr>
+          <td>Training hard 5–6 days/week</td>
+          <td>Up to ~500g/day</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Timing Carbs Around Your Day</h2>
+
+    <p>You can eat carbs in any combination as long as you're within your daily target, but if you want a simple framework:</p>
+
+    <ul>
+      <li><strong>Non-starchy vegetables</strong> — good on low-activity days</li>
+      <li><strong>Fruits</strong> — good on medium-activity days</li>
+      <li><strong>Starches</strong> — good on high-activity and training days</li>
+    </ul>
+
+    <p>This is the basic idea behind carb cycling — adjusting carb intake to match what you're doing that day. It's a more advanced tool, generally not necessary if you're new to training or nutrition, but useful once you're consistent and looking to fine-tune.</p>
+
+    <ul>
+      <li><strong>Low days:</strong> walking, yoga, lounging</li>
+      <li><strong>Medium days:</strong> moderate cardio — incline walking, moderate-intensity running, biking, swimming, hiking</li>
+      <li><strong>High days:</strong> resistance training, harder cardio, competition or sport</li>
+    </ul>
+
+    <p>This was a primer — we'll go deeper on specific pieces of this in future posts. If you have questions, reply and let me know what you want covered next.</p>
+
+    <div class="post-signoff">
+      <p>Until next time, carb on.</p>
+      <p><strong>— David</strong></p>
+    </div>
+
+  </article>
+
+  <!-- POST NAV -->
+  <div class="post-nav">
+    <a href="blog.html">← Back to Blog</a>
+    <a href="contact.html">Book a Free Consultation →</a>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Questions about your nutrition?</h2>
+    <p>As a registered dietitian and coach, I help people figure out what actually works for their life — not just what they read online.</p>
+    <a href="contact.html" class="btn-white">Book Your Free Consultation</a>
+    <p class="cta-note">No pressure. No hard sell. Just a conversation.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="48"></a>
+        <p style="margin-top:16px;">Private personal training and nutrition coaching in White Plains, NY. Helping real people get genuinely stronger since 2013.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="about.html">About David</a>
+        <a href="coaching.html">Coaching & Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/strongbylee" target="_blank">Instagram</a>
+        <a href="mailto:david@strongbylee.com">david@strongbylee.com</a>
+        <a href="contact.html">Book a Free Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="Strong by Lee" height="36">
+      <span>White Plains, NY · Westchester</span>
+      <span>© 2026 Strong by Lee. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+    document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 400); });
+    backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+</body>
+</html>
