@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Reviews — Strong by Lee | White Plains, NY</title>
+  <meta name="description" content="Real reviews from real clients of Strong by Lee in White Plains, NY. Over 60 Google reviews from people who came in nervous and left stronger." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Client Reviews — Strong by Lee" />
+  <meta property="og:description" content="Over 60 Google reviews. Real people, real results, real conversations." />
+  <meta property="og:image" content="https://strongbylee.com/images/studio-coaching.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* FEATURED REVIEWS */
+    .featured-reviews {
+      padding: 80px 80px 48px;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .featured-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      margin-bottom: 48px;
+    }
+    .featured-card {
+      background: var(--black); border-radius: 2px;
+      padding: 48px 44px; display: flex; flex-direction: column;
+      position: relative;
+    }
+    .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem; line-height: 0.8;
+      color: var(--accent); opacity: 0.3;
+      margin-bottom: 16px; display: block;
+    }
+    .featured-card blockquote {
+      font-size: 1rem; line-height: 1.8;
+      color: rgba(255,255,255,0.8); flex: 1;
+      margin-bottom: 28px; font-style: italic;
+    }
+    .featured-card blockquote strong {
+      font-style: normal; color: var(--accent); font-weight: 600;
+    }
+    .review-attr {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .review-initials {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent);
+    }
+    .review-date {
+      font-size: 0.72rem; color: rgba(255,255,255,0.3);
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .stars {
+      color: #F5A623; font-size: 0.9rem; margin-bottom: 16px;
+      display: block; letter-spacing: 2px;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--accent);
+      padding: 40px 80px;
+      display: flex; justify-content: center; gap: 80px;
+      flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem; font-weight: 900;
+      color: #fff; display: block; line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.7);
+      margin-top: 4px; display: block;
+    }
+
+    /* ALL REVIEWS GRID */
+    .all-reviews {
+      padding: 80px 80px 96px;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .all-reviews-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-end; margin-bottom: 48px;
+      padding-bottom: 24px; border-bottom: 1px solid var(--warm);
+      flex-wrap: wrap; gap: 16px;
+    }
+    .all-reviews-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; font-weight: 700; color: var(--black);
+    }
+    .google-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); text-decoration: none;
+      border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+    .google-link:hover { opacity: 0.7; }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .review-card {
+      background: var(--warm); border-radius: 2px;
+      padding: 32px 28px; display: flex; flex-direction: column;
+    }
+    .review-card .stars { font-size: 0.8rem; margin-bottom: 12px; }
+    .review-card blockquote {
+      font-size: 0.93rem; line-height: 1.75;
+      color: var(--text); flex: 1; margin-bottom: 24px;
+      font-style: italic;
+    }
+    .review-card blockquote strong {
+      font-style: normal; color: var(--accent); font-weight: 600;
+    }
+    .review-card .review-attr { border-top: 1px solid rgba(0,0,0,0.06); padding-top: 16px; }
+    .review-card .review-initials { color: var(--accent); }
+    .review-card .review-date { color: var(--muted); }
+
+    /* LEAVE A REVIEW */
+    .leave-review {
+      background: var(--black); padding: 80px;
+      text-align: center;
+    }
+    .leave-review h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      color: #fff; margin-bottom: 12px;
+    }
+    .leave-review p {
+      color: rgba(255,255,255,0.5); font-size: 0.97rem;
+      margin-bottom: 36px; max-width: 480px;
+      margin-left: auto; margin-right: auto;
+    }
+
+    @media (max-width: 900px) {
+      .featured-reviews { padding: 64px 32px 32px; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .stats-bar { gap: 32px; padding: 40px 32px; }
+      .all-reviews { padding: 64px 32px 72px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .leave-review { padding: 64px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="52"></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-close" id="mobileClose">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color: var(--accent);">Free Consultation</a>
+  </div>
+
+  <div class="page-hero">
+    <span class="section-label">Client Reviews</span>
+    <h1>Don't take my word<br/><em>for any of it.</em></h1>
+    <p>Over 60 Google reviews from real people who came in nervous, skeptical, or out of shape — and kept coming back.</p>
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-number">60+</span>
+      <span class="stat-label">Google Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">5.0</span>
+      <span class="stat-label">Average Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">10+</span>
+      <span class="stat-label">Years Coaching</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">1,000+</span>
+      <span class="stat-label">Clients Helped</span>
+    </div>
+  </div>
+
+  <!-- FEATURED REVIEWS -->
+  <section class="featured-reviews">
+    <span class="section-label">Highlighted Reviews</span>
+
+    <div class="featured-grid">
+
+      <div class="featured-card">
+        <span class="stars">★★★★★</span>
+        <span class="quote-mark">"</span>
+        <blockquote>I came into Dave's barely able to do modified push-ups correctly. As of yesterday, I can do <strong>8 normal push-ups — which is a huge accomplishment as I could never do them my entire life.</strong> My body feels strong mentally and physically. David has a sense of humor (he thinks he is the funniest), and a way of making every client feel heard and supported. I have recommended friends and family to David over the last year and everyone loves him!</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">C.B.</span>
+          <span class="review-date">July 2024 · Google</span>
+        </div>
+      </div>
+
+      <div class="featured-card">
+        <span class="stars">★★★★★</span>
+        <span class="quote-mark">"</span>
+        <blockquote>Working with David was one of the best decisions I made! I needed specific help with rebuilding my core after a detached abdomen wall. He is <strong>excellent at his job.</strong> My time was very limited due to a busy schedule but after a couple of months I started to see the results and was convinced he knows what he is doing. I highly recommend Strong by Lee.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">A.N.</span>
+          <span class="review-date">August 2023 · Google</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ALL REVIEWS -->
+  <section class="all-reviews">
+    <div class="all-reviews-header">
+      <h2>More from clients</h2>
+      <a href="https://g.page/r/CTsYeqjNlPShEBE/review" target="_blank" class="google-link">
+        Read all 60+ reviews on Google →
+      </a>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <blockquote>Despite <strong>never liking to work out</strong>, I've improved my physical fitness because of David's support. From the first session, it was obvious that David meets his clients at whatever fitness level they're at. As someone with asthma, David's expertise has been crucial to my progress. I've become physically stronger, more active, and more confident.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">C.H.</span>
+          <span class="review-date">July 2024</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <blockquote>I have lost close to <strong>15lbs since we began</strong> and overall just feel a lot better physically — confirmed at my annual physical where all my labs came back perfect. My doctor encouraged me to continue training. Though the workouts are tough, I always feel better after having accomplished them. I recently moved to Harrison but still go to David because it's been a great experience.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">D.O.</span>
+          <span class="review-date">September 2023</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <blockquote>I think it's finaLEE time I write a review. Working out 2-3 times a week is something I <strong>really look forward to</strong> because of how fun (and funny) he makes it. I went from having little muscle mass to being proud to rock a tank top almost every day this past summer. Most importantly, David has become more than just a trainer — but a great friend.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">B.J.</span>
+          <span class="review-date">August 2023</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <blockquote>I was very nervous about exercising because I was scared my form was wrong and generally didn't like crowded gyms. He <strong>made working out so much fun.</strong> He helped me with my form, learn new exercises to help with my back, and helped me push myself when I felt like giving up. If you're looking to gain confidence, get strong, or even start out — 100% recommend.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">A.B.</span>
+          <span class="review-date">October 2023</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <blockquote>David's training was super effective — I was able to do <strong>full push-ups and weighted rows earlier than I expected.</strong> He was very open to helping me with my supplement and dietary needs, which I really appreciated. He was flexible with my work schedule and very open to chatting, which made the training session much more enjoyable.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">Y.W.</span>
+          <span class="review-date">September 2023</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <blockquote>I prefer the private gym because I have access to every piece of equipment rather than a commercial space. David has a <strong>really good rapport with people</strong> and is able to get individuals to focus on the goal. I've created a solid foundation in the squat, bench, and deadlift. He was able to work with old injuries and navigate around them. I paused training this summer to enjoy family — but I'm on my way back as I missed it.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">C.T.</span>
+          <span class="review-date">July 2023</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEAVE A REVIEW -->
+  <section class="leave-review">
+    <span class="section-label">Had a great experience?</span>
+    <h2>Your review helps someone<br/>find the courage to start.</h2>
+    <p>Most people who need a trainer don't know where to look. Your honest words might be the thing that gets someone through the door.</p>
+    <a href="https://g.page/r/CTsYeqjNlPShEBE/review" target="_blank" class="btn-white">Leave a Google Review →</a>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to be the next review?</h2>
+    <p>The first session is really just a conversation. No pressure, no hard sell.</p>
+    <a href="contact.html" class="btn-white">Book Your Free Consultation</a>
+    <p class="cta-note">Someone there to notice.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="48"></a>
+        <p style="margin-top:16px;">Private personal training and nutrition coaching in White Plains, NY. Helping real people get genuinely stronger since 2013.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="about.html">About David</a>
+        <a href="coaching.html">Coaching & Services</a>
+        <a href="reviews.html">Client Reviews</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/strongbylee" target="_blank">Instagram</a>
+        <a href="mailto:david@strongbylee.com">david@strongbylee.com</a>
+        <a href="contact.html">Book a Free Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/logo.png" alt="Strong by Lee" height="36">
+      <span>77 Tarrytown Rd, Suite GNB · White Plains, NY 10607</span>
+      <span>© 2026 Strong by Lee. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+    document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 400); });
+    backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+</body>
+</html>
