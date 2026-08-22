@@ -24,7 +24,7 @@ body {
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 20px 64px;
+  padding: 12px 64px;
   background: rgba(247,245,240,0.94);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(0,0,0,0.07);
@@ -41,7 +41,8 @@ nav {
   text-decoration: none;
 }
 .nav-logo-img img {
-  height: 52px; width: auto;
+  height: 36px; width: auto;
+  max-height: 36px;
   display: block;
 }
 .nav-links { display: flex; gap: 36px; list-style: none; }
