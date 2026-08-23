@@ -140,7 +140,14 @@
       .featured-reviews { padding: 64px 32px 32px; }
       .featured-grid { grid-template-columns: 1fr; }
       .stats-bar { gap: 32px; padding: 40px 32px; }
-      .video-testimonial-grid { grid-template-columns: 1fr !important; }
+      .video-section-outer { padding: 48px 32px 0 !important; }
+      .video-testimonial-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .video-testimonial-grid > div:first-child {
+        padding-bottom: 177.77%;
+        max-width: 100%;
+      }
     }
       .all-reviews { padding: 64px 32px 72px; }
       .reviews-grid { grid-template-columns: 1fr; }
@@ -205,11 +212,11 @@
   </div>
 
   <!-- VIDEO TESTIMONIAL -->
-  <section style="padding: 80px 80px 0; max-width: 1200px; margin: 0 auto;">
+  <section class="video-section-outer" style="padding: 80px 80px 0; max-width: 1200px; margin: 0 auto;">
     <span class="section-label">Video Testimonial</span>
     <h2 style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--black); margin-bottom:8px;">In her own words.</h2>
     <p style="color:var(--muted); font-size:0.97rem; margin-bottom:40px;">Chanya has been training at Strong by Lee for 6 months. We asked her to describe her experience. She did — and added a bonus critique at the end.</p>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:48px; align-items:center;">
+    <div class="video-testimonial-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:48px; align-items:center;">
       <div style="position:relative; padding-bottom:177.77%; height:0; overflow:hidden; border-radius:2px; box-shadow:0 20px 60px rgba(0,0,0,0.15);">
         <iframe
           src="https://www.youtube.com/embed/ZGKe74uNoNo"
