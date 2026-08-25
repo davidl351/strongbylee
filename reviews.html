@@ -12,6 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
+    .review-card-photo {
+      width: 64px; height: 64px;
+      border-radius: 50%; object-fit: cover;
+      border: 2px solid var(--accent);
+      flex-shrink: 0;
+    }
+    .review-attr-with-photo {
+      display: flex; align-items: center; gap: 14px;
+      border-top: 1px solid rgba(0,0,0,0.06); padding-top: 16px;
+    }
+    .review-attr-text { display: flex; flex-direction: column; gap: 2px; }
+
     /* FEATURED REVIEWS */
     .featured-reviews {
       padding: 80px 80px 48px;
@@ -188,13 +200,13 @@
   <div class="page-hero">
     <span class="section-label">Client Reviews</span>
     <h1>Don't take my word<br/><em>for any of it.</em></h1>
-    <p>Over 60 Google reviews from real people who came in nervous, skeptical, or out of shape — and kept coming back.</p>
+    <p>Over 68 Google reviews from real people who came in nervous, skeptical, or out of shape — and kept coming back.</p>
   </div>
 
   <!-- STATS BAR -->
   <div class="stats-bar">
     <div class="stat-item">
-      <span class="stat-number">60+</span>
+      <span class="stat-number">68+</span>
       <span class="stat-label">Google Reviews</span>
     </div>
     <div class="stat-item">
@@ -244,10 +256,13 @@
       <div class="featured-card">
         <span class="stars">★★★★★</span>
         <span class="quote-mark">"</span>
-        <blockquote>I came into Dave's barely able to do modified push-ups correctly. As of yesterday, I can do <strong>8 normal push-ups — which is a huge accomplishment as I could never do them my entire life.</strong> My body feels strong mentally and physically. David has a sense of humor (he thinks he is the funniest), and a way of making every client feel heard and supported. I have recommended friends and family to David over the last year and everyone loves him!</blockquote>
-        <div class="review-attr">
-          <span class="review-initials">C.B.</span>
-          <span class="review-date">July 2024 · Google</span>
+        <blockquote>With David, I found a great combination of nutritional guidance AND fitness. His approach is individual. He is available for advice on diet and exercise at any time. <strong>I am well past 50 but I feel stronger than ever.</strong></blockquote>
+        <div class="review-attr-with-photo">
+          <img src="images/review-mr.jpg" alt="M.R. — Strong by Lee client" class="review-card-photo">
+          <div class="review-attr-text">
+            <span class="review-initials">M.R.</span>
+            <span class="review-date">2+ Years · Google Review</span>
+          </div>
         </div>
       </div>
 
@@ -326,6 +341,24 @@
         <div class="review-attr">
           <span class="review-initials">C.T.</span>
           <span class="review-date">July 2023</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <blockquote>I was completely inactive and wanted to start moving my body again. Two years later, I am still at Strong by Lee <strong>multiple times a week.</strong> I feel more confident and have more energy. David is attentive, kind, and friendly. If you're nervous about getting back into the gym, Strong by Lee is the place to go.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">J.C.</span>
+          <span class="review-date">August 2026</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <blockquote>The absolute best investment of both time and money! David is the <strong>perfect blend of knowledge, motivation and humor.</strong> He has pushed me further than I ever thought possible. With David's guidance, achieving your peak fitness goals becomes a reality.</blockquote>
+        <div class="review-attr">
+          <span class="review-initials">B.O.</span>
+          <span class="review-date">August 2026</span>
         </div>
       </div>
 
