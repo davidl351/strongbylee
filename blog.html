@@ -4,7 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog — Strong by Lee | White Plains, NY</title>
-  <meta name="description" content="Thoughts on fitness, nutrition, and mindset from David Lee — personal trainer and registered dietitian in White Plains, NY." />
+  <meta name="description" content="Honest thoughts on fitness, nutrition, and mindset from David Lee — personal trainer and registered dietitian in White Plains, NY." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="David Lee" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog — Strong by Lee" />
+  <meta property="og:description" content="Honest takes on training, nutrition, and the stuff nobody else wants to say out loud." />
+  <meta property="og:image" content="https://strongbylee.com/images/studio-coaching.jpg" />
+  <meta property="og:url" content="https://strongbylee.com/blog.html" />
+  <meta property="og:site_name" content="Strong by Lee" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog — Strong by Lee" />
+  <meta name="twitter:description" content="Honest takes on training, nutrition, and the stuff nobody else wants to say out loud." />
+  <meta name="twitter:image" content="https://strongbylee.com/images/studio-coaching.jpg" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
@@ -61,10 +74,11 @@
 </head>
 <body>
   <nav>
-    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="52"></a>
+    <a href="index.html" class="nav-logo-img"><img src="images/logo.png" alt="Strong by Lee" height="36" style="filter: invert(1) brightness(2);"></a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
       <li><a href="blog.html" class="active">Blog</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -74,13 +88,16 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <span class="mobile-close" id="mobileClose">&times;</span>
-    <a href="index.html">Home</a>
+    
+        <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="coaching.html">Coaching</a>
-    <a href="blog.html">Blog</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="blog.html" class="active">Blog</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" style="color: var(--accent);">Free Consultation</a>
+  
   </div>
   <div class="page-hero">
     <span class="section-label">Blog</span>
@@ -96,19 +113,32 @@
   <div class="featured-post">
     <span class="featured-label">Featured Post</span>
     <div class="featured-card">
-      <div class="featured-image"><p>Featured post image goes here</p></div>
+      <div class="featured-image" style="overflow:hidden;">
+        <img src="images/studio-coaching.jpg" alt="David coaching a client at Strong by Lee" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block; min-height:400px;">
+      </div>
       <div class="featured-content">
         <span class="post-category">Mindset</span>
-        <span class="post-meta">Coming Soon</span>
-        <h2>What if all of this is a <em>simulation?</em></h2>
-        <p>A client walked in and opened with that question. What followed was one of the more interesting conversations I've had in the studio — and it ended up saying something true about why any of us show up at all.</p>
-        <a href="#" class="read-more">Coming Soon →</a>
+        <span class="post-meta">October 11, 2026</span>
+        <h2>The Difficulty of <em>Nuance</em></h2>
+        <p>"It depends" is an honest answer. But after 15 years of coaching — and a few arguments with an AI — I started wondering if it's also a way of avoiding conviction.</p>
+        <a href="blog-nuance.html" class="read-more">Read Now →</a>
       </div>
     </div>
   </div>
   <div class="post-grid">
     <p class="post-grid-header">More Posts</p>
     <div class="grid" id="postGrid">
+      <div class="post-card" data-category="mindset">
+        <div class="post-card-image" style="overflow:hidden;">
+          <img src="images/studio-coaching.jpg" alt="David coaching at Strong by Lee" style="width:100%; height:180px; object-fit:cover; object-position:center 20%; display:block;">
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Mindset</span>
+          <h4>The Difficulty of Nuance</h4>
+          <p>"It depends" is an honest answer. But after 15 years of coaching — and a few arguments with an AI — I started wondering if it's also a way of avoiding conviction.</p>
+          <div class="post-card-footer"><span class="post-date">October 11, 2026</span><a href="blog-nuance.html" class="card-read-more">Read →</a></div>
+        </div>
+      </div>
       <div class="post-card" data-category="mindset">
         <div class="post-card-image" style="overflow:hidden;">
           <img src="images/blog-journal.jpg" alt="Journaling" style="width:100%; height:180px; object-fit:cover; display:block;">
@@ -198,8 +228,9 @@
         <h4>Pages</h4>
         <a href="about.html">About David</a>
         <a href="coaching.html">Coaching & Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="faq.html">FAQ</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="reviews.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
@@ -210,8 +241,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <img src="images/logo.png" alt="Strong by Lee" height="36">
-      <span>White Plains, NY · Westchester</span>
+      <img src="images/logo.png" alt="Strong by Lee" height="36" style="filter: invert(1) brightness(2);">
+      <span>77 Tarrytown Rd, Suite GNB · White Plains, NY 10607</span>
       <span>© 2026 Strong by Lee. All rights reserved.</span>
     </div>
   </footer>
